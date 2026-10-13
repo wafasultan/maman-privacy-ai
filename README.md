@@ -39,21 +39,38 @@ The application runs locally on supported Macs. Dataset contents are processed l
 
 ## See MA'MAN in action
 
+
 ## See MA'MAN in Action
 
-### 1. Dataset Overview
-![Dataset Overview](assets/<img width="848" height="480" alt="dataset-preview" src="https://github.com/user-attachments/assets/58f044f1-0eb3-4650-9c0b-a9ada2a930c5" />
-)
+Explore how MA'MAN transforms raw datasets into safer, privacy-aware data through AI-powered analysis and protection.
 
-### 2. AI-Powered Column Classification
-![Column Classification](assets/classification.png)
+### 1. Upload Your Dataset
+Upload a CSV file to begin the privacy analysis.
 
-### 3. Privacy Risk Assessment
-![Risk Assessment](assets/risk-assessment.png)
+<img width="1469" height="837" alt="Uploud" src="https://github.com/user-attachments/assets/5db6aa8f-202c-4f85-902e-1cebee4b01cd" />
 
-### 4. Privacy Protection Results
-![Protection Results](assets/protection-results.png)
-**▶ [Watch the full product demo (MP4)](assets/demo/maman-demo.mp4)**
+
+### 2. Dataset Overview
+Preview your dataset and explore its structure before analysis.
+
+<img width="1470" height="834" alt="dataset-preview" src="https://github.com/user-attachments/assets/424ac68b-79e6-4603-bc96-8f210cd270b2" />
+
+
+### 3. AI-Powered Column Classification
+MA'MAN uses AI to identify direct identifiers, quasi-identifiers, and sensitive attributes.
+
+<img width="1470" height="828" alt="classification" src="https://github.com/user-attachments/assets/e804524f-8878-4fde-b55e-0d7acdaccf3e" />
+
+### 4. Privacy Risk Assessment
+Analyze potential privacy risks and understand how identifiable the records may be.
+
+<img width="1470" height="833" alt="risk-assessment" src="https://github.com/user-attachments/assets/b09f8b43-b13e-40df-9069-3a59272a06ec" />
+
+### 5. Privacy Protection Results
+Compare privacy risks before and after applying protection techniques.
+
+<img width="1470" height="826" alt="protection-results" src="https://github.com/user-attachments/assets/2c83e594-6ad9-45e3-8fef-f8e67ce2210a" />
+
 
 ### Product walkthrough
 
