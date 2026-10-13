@@ -23,9 +23,11 @@
 
 ## The challenge
 
-Removing names from a dataset does **not** necessarily protect the people behind its records. A combination of seemingly harmless fields—such as age, location, or occupation—can distinguish an individual record and may enable linkage with external information.
+How can we identify and reduce privacy risks without unnecessarily compromising the value of the data?
 
-Organizations and data practitioners need a practical way to understand these risks **before** sharing a CSV file, without relying on an AI model to invent privacy scores or guarantee anonymity.
+Addressing this challenge requires more than detecting personal identifiers. A reliable approach must recognize indirect identifiers, evaluate how combinations of attributes affect record uniqueness, measure privacy risks using defined metrics, and apply appropriate protection techniques.
+
+The challenge becomes even greater when working with datasets containing different languages, structures, and types of sensitive information.
 
 ## Our solution
 
@@ -36,8 +38,6 @@ Its guiding principle is simple:
 > **AI interprets the columns. Deterministic code measures risk and applies protection.**
 
 The application runs locally on supported Macs. Dataset contents are processed locally; initial setup downloads model dependencies. MA'MAN accepts **Arabic and English data**, while the current interface is **English-only**.
-
-## See MA'MAN in action
 
 
 ## See MA'MAN in Action
