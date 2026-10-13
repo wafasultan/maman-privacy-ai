@@ -212,19 +212,28 @@ Maman/
 └── assets/                   # Brand, screenshots and demo video
 ```
 
-## Data, responsible use and future work
+## Responsible Use & Limitations
 
-The project includes Arabic-oriented synthetic example datasets, evaluation materials, and sample files. **Before public release, review each included dataset and its redistribution license or provenance.** Do not assume that publicly downloadable data is automatically redistributable. Avoid committing personal information, API keys, local environments, or private reports.
+MA'MAN is designed to help users identify, assess, and reduce potential privacy risks before sharing datasets.
 
-MA'MAN is a **decision-support tool**, not a legal compliance certification or an unconditional anonymization guarantee. A safer copy can still expose information under other threat models. Human review remains important before publishing sensitive data.
+While the system applies established privacy metrics and protection techniques, **no anonymization method can guarantee complete protection against every possible re-identification scenario**.
 
-Planned improvements include an independent external evaluation, tests with authorized real-world datasets, and reduced startup time and memory consumption.
+MA'MAN supports informed privacy decisions but does not replace human judgment, organizational privacy policies, or regulatory compliance assessments.
+
+## Future Roadmap
+
+MA'MAN is continuously evolving toward more reliable, efficient, and adaptable data privacy protection.
+
+- **Independent Evaluation:** Validate performance on additional, previously unseen datasets.
+- **Real-World Validation:** Evaluate the system using authorized datasets from real-world organizations.
+- **Performance Optimization:** Reduce model initialization time and memory consumption for more efficient local execution.
+- **Enhanced Privacy Assessment:** Explore additional privacy metrics and re-identification scenarios to strengthen risk analysis.
 
 ## Team
 
-**Team 8 — Tuwaiq Generative AI / LLM Bootcamp**
+**Tuwaiq Generative AI / LLM Bootcamp**
 
-**Wafa · Samar · Sultanah · Bushra**
+**Wafa Alotaibi  · Samar Alfallaj· Sultanah Alotaibi
 
 > Confirm team names, spelling, and individual responsibilities before publishing. The presentation lists three presenters while the existing repository documentation lists four contributors.
 
