@@ -1,0 +1,237 @@
+﻿split,dataset,column,direct_identifier,quasi_identifier,sensitive_attribute,record_identifier,needs_review,reason,review_status,reviewer_notes
+train,adult,age,0,1,0,0,0,العمر مع أعمدة أخرى يميّز الشخص,APPROVED,راجعه Claude
+train,adult,workclass,0,1,0,0,0,نوع جهة العمل صفة معروفة عن الشخص,APPROVED,راجعه Claude
+train,adult,fnlwgt,0,0,0,0,1,وزن إحصائي للمسح وليس صفة للشخص رغم أنه شبه فريد,APPROVED,راجعه Claude
+train,adult,education,0,1,0,0,0,المستوى التعليمي يساعد في التمييز,APPROVED,راجعه Claude
+train,adult,education_num,0,1,0,0,0,ترميز رقمي للمستوى التعليمي,APPROVED,راجعه Claude
+train,adult,marital_status,0,1,1,0,0,الحالة الاجتماعية صفة معروفة عن الشخص، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,adult,occupation,0,1,0,0,0,المهنة صفة معروفة عن الشخص,APPROVED,راجعه Claude
+train,adult,relationship,0,1,1,0,0,دور الشخص في الأسرة يضيّق دائرة المتشابهين، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,adult,race,0,1,1,0,0,العرق صفة ظاهرة تساعد في التمييز، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,adult,sex,0,1,1,0,0,الجنس من المعرّفات غير المباشرة الكلاسيكية، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,adult,capital_gain,0,0,1,0,0,أرباح رأس المال معلومة مالية خاصة,APPROVED,راجعه Claude
+train,adult,capital_loss,0,0,1,0,0,خسائر رأس المال معلومة مالية خاصة,APPROVED,راجعه Claude
+train,adult,hours_per_week,0,0,0,0,0,ساعات العمل لا تُعرف عادة عن الشخص من الخارج,APPROVED,راجعه Claude
+train,adult,native_country,0,1,0,0,0,بلد الأصل يقلّل عدد المتشابهين,APPROVED,راجعه Claude
+train,adult,income,0,0,1,0,0,الدخل معلومة مالية يضر كشفها,APPROVED,راجعه Claude
+train,titanic,PassengerId,0,0,0,1,0,رقم تسلسلي داخلي للصف لا يرتبط بشخص خارج الملف,APPROVED,راجعه Claude
+train,titanic,Survived,0,0,1,0,0,النجاة أو الوفاة معلومة حياتية حساسة,APPROVED,راجعه Claude؛ قرار الفريق: Ticket = QI و Survived = حساس
+train,titanic,Pclass,0,1,0,0,0,درجة السفر صفة يمكن معرفتها من مصادر أخرى,APPROVED,راجعه Claude
+train,titanic,Name,1,0,0,0,0,الاسم الكامل يحدد الشخص مباشرة,APPROVED,راجعه Claude
+train,titanic,Sex,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,titanic,Age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+train,titanic,SibSp,0,1,1,0,0,عدد الإخوة والأزواج المرافقين يكشف تركيبة العائلة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+train,titanic,Parch,0,1,1,0,0,عدد الوالدين والأبناء المرافقين يكشف تركيبة العائلة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+train,titanic,Ticket,0,1,0,0,0,رقم التذكرة قد يكون مشتركاً بين أفراد العائلة فيضيّق الدائرة دون أن يحدد الشخص وحده,APPROVED,راجعه Claude؛ قرار الفريق: Ticket = QI و Survived = حساس
+train,titanic,Fare,0,0,0,0,0,سعر التذكرة لا يكشف الشخص ولا يضره,APPROVED,راجعه Claude؛ قرار الفريق: الفواتير وقيمة الطلب الشخصي حساسة، وسعر المنتج العام عادي
+train,titanic,Cabin,0,1,0,0,0,رقم المقصورة يضيّق دائرة الركاب كثيراً,APPROVED,راجعه Claude
+train,titanic,Embarked,0,1,0,0,0,ميناء الصعود يمكن معرفته من سجلات أخرى,APPROVED,راجعه Claude
+train,heart_disease,age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+train,heart_disease,sex,0,1,1,0,0,الجنس مرمّز رقمياً وهو معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,heart_disease,cp,0,0,1,0,1,نوع ألم الصدر معلومة صحية,APPROVED,راجعه Claude
+train,heart_disease,trestbps,0,0,1,0,1,ضغط الدم أثناء الراحة قياس صحي,APPROVED,راجعه Claude
+train,heart_disease,chol,0,0,1,0,0,مستوى الكوليسترول نتيجة تحليل طبي,APPROVED,راجعه Claude
+train,heart_disease,fbs,0,0,1,0,1,سكر الصائم مؤشر صحي,APPROVED,راجعه Claude
+train,heart_disease,thalach,0,0,1,0,1,أعلى نبض قلب قياس طبي,APPROVED,راجعه Claude
+train,heart_disease,exang,0,0,1,0,1,الذبحة مع الجهد معلومة صحية,APPROVED,راجعه Claude
+train,heart_disease,oldpeak,0,0,1,0,1,قراءة تخطيط القلب معلومة طبية,APPROVED,راجعه Claude
+train,heart_disease,target,0,0,1,0,0,وجود مرض القلب تشخيص صحي,APPROVED,راجعه Claude
+train,bank_marketing,age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+train,bank_marketing,job,0,1,0,0,0,المهنة معرّف غير مباشر,APPROVED,راجعه Claude
+train,bank_marketing,marital,0,1,1,0,0,الحالة الاجتماعية معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,bank_marketing,education,0,1,0,0,0,المستوى التعليمي معرّف غير مباشر,APPROVED,راجعه Claude
+train,bank_marketing,default,0,0,1,0,0,التعثر الائتماني معلومة مالية حساسة,APPROVED,راجعه Claude
+train,bank_marketing,balance,0,0,1,0,0,رصيد الحساب البنكي معلومة مالية خاصة,APPROVED,راجعه Claude
+train,bank_marketing,housing,0,0,1,0,0,وجود قرض سكني معلومة مالية,APPROVED,راجعه Claude
+train,bank_marketing,loan,0,0,1,0,0,وجود قرض شخصي معلومة مالية,APPROVED,راجعه Claude
+train,bank_marketing,contact,0,0,0,0,0,قناة التواصل في الحملة بيانات تشغيلية,APPROVED,راجعه Claude
+train,bank_marketing,day,0,0,0,0,0,يوم آخر اتصال بالحملة بيانات تشغيلية,APPROVED,راجعه Claude
+train,bank_marketing,month,0,0,0,0,0,شهر الاتصال بيانات تشغيلية,APPROVED,راجعه Claude
+train,bank_marketing,duration,0,0,0,0,0,مدة المكالمة بالثواني بيانات تشغيلية,APPROVED,راجعه Claude
+train,bank_marketing,campaign,0,0,0,0,0,عدد الاتصالات في الحملة عدّاد,APPROVED,راجعه Claude
+train,bank_marketing,pdays,0,0,0,0,1,الأيام منذ آخر حملة عدّاد,APPROVED,راجعه Claude
+train,bank_marketing,poutcome,0,0,0,0,0,نتيجة الحملة السابقة بيانات تشغيلية,APPROVED,راجعه Claude
+train,bank_marketing,y,0,0,0,0,0,استجابة العميل للحملة هدف تسويقي,APPROVED,راجعه Claude
+train,medical_insurance,age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+train,medical_insurance,sex,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,medical_insurance,bmi,0,0,1,0,0,مؤشر كتلة الجسم معلومة صحية,APPROVED,راجعه Claude
+train,medical_insurance,children,0,1,1,0,0,عدد الأبناء يكشف تركيبة الأسرة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+train,medical_insurance,smoker,0,0,1,0,0,التدخين معلومة صحية حساسة,APPROVED,راجعه Claude
+train,medical_insurance,region,0,1,0,0,0,المنطقة الجغرافية معرّف غير مباشر,APPROVED,راجعه Claude
+train,medical_insurance,charges,0,0,1,0,0,تكاليف العلاج معلومة صحية ومالية,APPROVED,راجعه Claude
+train,hr_attrition,EmployeeNumber,1,0,0,1,0,الرقم الوظيفي يحدد الموظف داخل الشركة,APPROVED,راجعه Claude
+train,hr_attrition,Age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+train,hr_attrition,Gender,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,hr_attrition,Department,0,1,0,0,0,القسم معروف لزملاء الموظف,APPROVED,راجعه Claude
+train,hr_attrition,JobRole,0,1,0,0,0,المسمى الوظيفي معروف عن الشخص,APPROVED,راجعه Claude
+train,hr_attrition,MaritalStatus,0,1,1,0,0,الحالة الاجتماعية معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,hr_attrition,MonthlyIncome,0,0,1,0,0,الراتب الشهري معلومة مالية خاصة,APPROVED,راجعه Claude
+train,hr_attrition,PerformanceRating,0,0,1,0,0,تقييم الأداء معلومة يضر كشفها بالموظف,APPROVED,راجعه Claude
+train,hr_attrition,YearsAtCompany,0,1,0,0,0,سنوات الخدمة يعرفها الزملاء وتضيّق الدائرة,APPROVED,راجعه Claude
+train,hr_attrition,EmployeeCount,0,0,0,0,0,قيمة ثابتة لا تحمل معلومة,APPROVED,راجعه Claude
+train,hr_attrition,StandardHours,0,0,0,0,0,قيمة ثابتة لا تحمل معلومة,APPROVED,راجعه Claude
+train,hr_attrition,Attrition,0,0,0,0,0,متغير الهدف للنموذج ولا يميّز الشخص,APPROVED,راجعه Claude
+valid,customer_personality,ID,1,0,0,1,0,رقم العميل يحدده في أنظمة الشركة,APPROVED,راجعه Claude؛ صُحّح: كان مفتاح سجل فقط، وهو رقم عميل مثل customerID
+valid,customer_personality,Year_Birth,0,1,0,0,0,سنة الميلاد معرّف غير مباشر,APPROVED,راجعه Claude
+valid,customer_personality,Education,0,1,0,0,0,المستوى التعليمي معرّف غير مباشر,APPROVED,راجعه Claude
+valid,customer_personality,Marital_Status,0,1,1,0,0,الحالة الاجتماعية معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+valid,customer_personality,Income,0,0,1,0,0,الدخل معلومة مالية خاصة,APPROVED,راجعه Claude
+valid,customer_personality,Kidhome,0,1,1,0,0,عدد الأطفال في البيت يكشف تركيبة الأسرة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+valid,customer_personality,Teenhome,0,1,1,0,0,عدد المراهقين في البيت يكشف تركيبة الأسرة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+valid,customer_personality,Dt_Customer,0,1,0,0,0,تاريخ التسجيل حدث مرتبط بالشخص,APPROVED,راجعه Claude
+valid,customer_personality,Recency,0,0,0,0,0,أيام منذ آخر شراء مقياس تسويقي,APPROVED,راجعه Claude
+valid,customer_personality,MntWines,0,0,1,0,0,مشتريات الخمور تكشف استهلاك الكحول وهي معلومة حساسة,APPROVED,راجعه Claude؛ صُحّح: كان عادي، ومشتريات الخمور حساسة مثل Dalc
+valid,customer_personality,NumWebPurchases,0,0,0,0,0,عدد المشتريات عدّاد,APPROVED,راجعه Claude
+valid,customer_personality,Complain,0,0,0,0,0,مؤشر شكوى تشغيلي,APPROVED,راجعه Claude
+valid,customer_personality,Z_CostContact,0,0,0,0,0,قيمة ثابتة لا تحمل معلومة,APPROVED,راجعه Claude
+test,telco_churn,customerID,1,0,0,1,0,رقم حساب العميل يحدده في أنظمة الشركة,APPROVED,راجعه Claude
+test,telco_churn,gender,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,telco_churn,SeniorCitizen,0,1,0,0,0,مؤشر كبار السن يكشف الفئة العمرية,APPROVED,راجعه Claude
+test,telco_churn,Partner,0,1,1,0,0,وجود شريك يكشف الحالة الاجتماعية، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,telco_churn,Dependents,0,1,1,0,0,وجود معالين يكشف تركيبة الأسرة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+test,telco_churn,tenure,0,0,0,0,0,مدة الاشتراك بالأشهر مقياس تشغيلي,APPROVED,راجعه Claude
+test,telco_churn,PhoneService,0,0,0,0,0,نوع الخدمة بيانات منتج,APPROVED,راجعه Claude
+test,telco_churn,InternetService,0,0,0,0,0,نوع الخدمة بيانات منتج,APPROVED,راجعه Claude
+test,telco_churn,Contract,0,0,0,0,0,نوع العقد بيانات منتج,APPROVED,راجعه Claude
+test,telco_churn,PaymentMethod,0,0,0,0,0,طريقة الدفع بيانات تشغيلية,APPROVED,راجعه Claude
+test,telco_churn,MonthlyCharges,0,0,1,0,0,الفاتورة الشهرية تكشف مصروفات الشخص المالية,APPROVED,راجعه Claude؛ قرار الفريق: الفواتير وقيمة الطلب الشخصي حساسة، وسعر المنتج العام عادي
+test,telco_churn,TotalCharges,0,0,1,0,0,إجمالي الفواتير يكشف مصروفات الشخص المالية,APPROVED,راجعه Claude؛ قرار الفريق: الفواتير وقيمة الطلب الشخصي حساسة، وسعر المنتج العام عادي
+test,telco_churn,Churn,0,0,0,0,0,متغير الهدف لإلغاء الاشتراك,APPROVED,راجعه Claude
+test,german_credit,checking_status,0,0,1,0,0,حالة الحساب الجاري معلومة مالية,APPROVED,راجعه Claude
+test,german_credit,duration,0,0,0,0,0,مدة القرض بالأشهر شرط عقد,APPROVED,راجعه Claude
+test,german_credit,credit_history,0,0,1,0,0,السجل الائتماني معلومة مالية حساسة,APPROVED,راجعه Claude
+test,german_credit,credit_amount,0,0,1,0,0,مبلغ القرض معلومة مالية خاصة,APPROVED,راجعه Claude
+test,german_credit,age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+test,german_credit,personal_status,0,1,1,0,0,الجنس والحالة الاجتماعية معاً معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,german_credit,job,0,1,0,0,0,فئة الوظيفة معرّف غير مباشر,APPROVED,راجعه Claude
+test,german_credit,housing,0,1,0,0,0,نوع السكن يمكن معرفته عن الشخص,APPROVED,راجعه Claude
+test,german_credit,foreign_worker,0,1,0,0,0,كونه عاملاً أجنبياً يضيّق دائرة المتشابهين,APPROVED,راجعه Claude
+test,german_credit,num_dependents,0,1,1,0,0,عدد المعالين يكشف تركيبة الأسرة، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+test,german_credit,class,0,0,1,0,0,تصنيف المخاطر الائتمانية للشخص معلومة حساسة,APPROVED,راجعه Claude
+test,student_performance,school,0,1,0,0,0,المدرسة معروفة عن الطالب وتضيّق الدائرة,APPROVED,راجعه Claude
+test,student_performance,sex,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,student_performance,age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+test,student_performance,address,0,1,0,0,0,نوع منطقة السكن معرّف غير مباشر,APPROVED,راجعه Claude
+test,student_performance,famsize,0,1,1,0,0,حجم الأسرة معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude؛ قرار الفريق: تركيبة الأسرة QI + حساسة
+test,student_performance,Medu,0,1,0,0,1,تعليم الأم صفة عائلية تساعد في التمييز,APPROVED,راجعه Claude
+test,student_performance,Fjob,0,1,0,0,0,مهنة الأب صفة عائلية تساعد في التمييز,APPROVED,راجعه Claude
+test,student_performance,Dalc,0,0,1,0,1,استهلاك الكحول معلومة حساسة,APPROVED,راجعه Claude
+test,student_performance,health,0,0,1,0,0,الحالة الصحية معلومة حساسة,APPROVED,راجعه Claude
+test,student_performance,absences,0,0,1,0,0,غياب الطالب سجل تعليمي يضر كشفه,APPROVED,راجعه Claude
+test,student_performance,G3,0,0,1,0,0,الدرجة النهائية سجل تعليمي خاص,APPROVED,راجعه Claude
+test,student_performance,studytime,0,0,0,0,0,وقت المذاكرة الأسبوعي مقياس عام,APPROVED,راجعه Claude
+test,pima_diabetes,Pregnancies,0,0,1,0,0,عدد مرات الحمل معلومة صحية,APPROVED,راجعه Claude
+test,pima_diabetes,Glucose,0,0,1,0,0,مستوى الجلوكوز نتيجة تحليل طبي,APPROVED,راجعه Claude
+test,pima_diabetes,BloodPressure,0,0,1,0,0,ضغط الدم قياس صحي,APPROVED,راجعه Claude
+test,pima_diabetes,SkinThickness,0,0,1,0,0,سماكة الجلد قياس طبي,APPROVED,راجعه Claude
+test,pima_diabetes,Insulin,0,0,1,0,0,مستوى الإنسولين نتيجة تحليل طبي,APPROVED,راجعه Claude
+test,pima_diabetes,BMI,0,0,1,0,0,مؤشر كتلة الجسم معلومة صحية,APPROVED,راجعه Claude
+test,pima_diabetes,DiabetesPedigreeFunction,0,0,1,0,0,مؤشر الاستعداد الوراثي للسكري معلومة صحية,APPROVED,راجعه Claude
+test,pima_diabetes,Age,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+test,pima_diabetes,Outcome,0,0,1,0,0,الإصابة بالسكري تشخيص صحي,APPROVED,راجعه Claude
+test,web_logs,user_email,1,0,0,0,0,البريد الإلكتروني يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,web_logs,ip_address,1,0,0,0,0,عنوان IP يمكن ربطه بمشترك محدد,APPROVED,راجعه Claude
+test,web_logs,device_id,1,0,0,0,0,معرّف الجهاز يتتبّع شخصاً محدداً,APPROVED,راجعه Claude
+test,web_logs,session_id,0,0,0,1,0,معرّف جلسة مؤقت داخلي,APPROVED,راجعه Claude
+test,web_logs,user_agent,0,1,0,0,0,نوع الجهاز والمتصفح يساعد في بصمة المستخدم,APPROVED,راجعه Claude
+test,web_logs,event_time,0,1,0,0,0,توقيت نشاط الشخص يمكن ربطه بأحداث معروفة,APPROVED,راجعه Claude
+test,web_logs,page_url,0,0,0,0,0,الصفحة المزارة بيانات تصفح عامة,APPROVED,راجعه Claude
+test,web_logs,country,0,1,0,0,0,الدولة معرّف غير مباشر,APPROVED,راجعه Claude
+test,web_logs,latency_ms,0,0,0,0,0,زمن الاستجابة قياس تقني,APPROVED,راجعه Claude
+test,web_logs,row_hash,0,0,0,1,0,بصمة تقنية للصف وليست صفة لشخص رغم أنها فريدة,APPROVED,راجعه Claude
+test,health_claims,patient_ssn,1,0,0,0,0,رقم الضمان الاجتماعي يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,health_claims,pt_name,1,0,0,0,0,اسم المريض يحدده مباشرة,APPROVED,راجعه Claude
+test,health_claims,dob,0,1,0,0,0,تاريخ الميلاد معرّف غير مباشر قوي,APPROVED,راجعه Claude
+test,health_claims,zip5,0,1,0,0,0,الرمز البريدي يضيّق الموقع الجغرافي,APPROVED,راجعه Claude
+test,health_claims,gender,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,health_claims,dx_code,0,0,1,0,0,رمز التشخيص ICD-10 معلومة صحية,APPROVED,راجعه Claude
+test,health_claims,cpt_code,0,0,1,0,0,رمز الإجراء الطبي معلومة صحية,APPROVED,راجعه Claude
+test,health_claims,claim_amount,0,0,1,0,0,مبلغ المطالبة معلومة صحية ومالية,APPROVED,راجعه Claude
+test,health_claims,claim_id,0,0,0,1,0,معرّف المطالبة داخلي ولا يحدد الشخص وحده,APPROVED,راجعه Claude
+test,health_claims,admit_date,0,1,0,0,0,تاريخ الدخول للمستشفى حدث يمكن ربطه بالشخص,APPROVED,راجعه Claude
+train,sa_hospital,رقم_السجل,0,0,0,1,0,رقم تسلسلي للصف داخل الملف,APPROVED,راجعه Claude
+train,sa_hospital,رقم_الملف_الطبي,1,0,0,1,0,رقم الملف الطبي فريد لكل مريض,APPROVED,راجعه Claude
+train,sa_hospital,اسم_المريض,1,0,0,0,0,اسم المريض يحدده مباشرة,APPROVED,راجعه Claude
+train,sa_hospital,رقم_الهوية,1,0,0,0,0,رقم الهوية الوطنية يحدد الشخص مباشرة,APPROVED,راجعه Claude
+train,sa_hospital,جوال_المريض,1,0,0,0,0,رقم الجوال يحدد الشخص مباشرة,APPROVED,راجعه Claude
+train,sa_hospital,العمر,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+train,sa_hospital,الجنس,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,sa_hospital,الجنسية,0,1,0,0,0,الجنسية معرّف غير مباشر,APPROVED,راجعه Claude
+train,sa_hospital,الحي,0,1,0,0,0,الحي السكني يضيّق دائرة الأشخاص,APPROVED,راجعه Claude
+train,sa_hospital,تاريخ_الزيارة,0,1,0,0,0,تاريخ الزيارة حدث يمكن ربطه بالشخص,APPROVED,راجعه Claude
+train,sa_hospital,التشخيص,0,0,1,0,0,التشخيص معلومة صحية حساسة,APPROVED,راجعه Claude
+train,sa_hospital,السكر_التراكمي,0,0,1,0,0,نتيجة تحليل طبي,APPROVED,راجعه Claude
+train,sa_hospital,العيادة,0,0,1,0,0,نوع العيادة يكشف طبيعة الحالة الصحية,APPROVED,راجعه Claude
+train,sa_hospital,مدة_الانتظار_بالدقائق,0,0,0,0,0,مقياس تشغيلي للمستشفى,APPROVED,راجعه Claude
+train,sa_hr,الرقم_الوظيفي,1,0,0,1,0,الرقم الوظيفي يحدد الموظف داخل الجهة,APPROVED,راجعه Claude
+train,sa_hr,اسم_الموظف,1,0,0,0,0,اسم الموظف يحدده مباشرة,APPROVED,راجعه Claude
+train,sa_hr,البريد_الإلكتروني,1,0,0,0,0,البريد الإلكتروني يحدد الشخص مباشرة,APPROVED,راجعه Claude
+train,sa_hr,الآيبان,1,0,0,0,0,رقم الآيبان مرتبط بحساب شخص محدد,APPROVED,راجعه Claude
+train,sa_hr,تاريخ_الميلاد,0,1,0,0,0,تاريخ الميلاد معرّف غير مباشر قوي,APPROVED,راجعه Claude
+train,sa_hr,الجنس,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+train,sa_hr,الجنسية,0,1,0,0,0,الجنسية معرّف غير مباشر,APPROVED,راجعه Claude
+train,sa_hr,المسمى_الوظيفي,0,1,0,0,0,المسمى الوظيفي معروف عن الشخص,APPROVED,راجعه Claude
+train,sa_hr,الإدارة,0,1,0,0,0,الإدارة معروفة لزملاء الموظف,APPROVED,راجعه Claude
+train,sa_hr,تاريخ_التعيين,0,1,0,0,0,تاريخ التعيين حدث يعرفه الزملاء,APPROVED,راجعه Claude
+train,sa_hr,الراتب_الأساسي,0,0,1,0,0,الراتب معلومة مالية خاصة,APPROVED,راجعه Claude
+train,sa_hr,بدل_السكن,0,0,1,0,0,البدلات جزء من الدخل الخاص,APPROVED,راجعه Claude
+train,sa_hr,تقييم_الأداء,0,0,1,0,0,تقييم الأداء يضر كشفه بالموظف,APPROVED,راجعه Claude
+train,sa_hr,رصيد_الإجازات,0,0,0,0,0,رصيد الإجازات عدّاد إداري,APPROVED,راجعه Claude
+train,sa_delivery,رقم_الطلب,0,0,0,1,0,رقم الطلب داخلي ولا يحدد الشخص وحده,APPROVED,راجعه Claude
+train,sa_delivery,اسم_المستلم,1,0,0,0,0,اسم المستلم يحدده مباشرة,APPROVED,راجعه Claude
+train,sa_delivery,جوال_المستلم,1,0,0,0,0,رقم الجوال يحدد الشخص مباشرة,APPROVED,راجعه Claude
+train,sa_delivery,العنوان_الوطني,1,0,0,0,0,العنوان الوطني المختصر يحدد مسكن الشخص,APPROVED,راجعه Claude
+train,sa_delivery,الحي,0,1,0,0,0,الحي السكني يضيّق دائرة الأشخاص,APPROVED,راجعه Claude
+train,sa_delivery,المدينة,0,1,0,0,0,المدينة معرّف غير مباشر,APPROVED,راجعه Claude
+train,sa_delivery,وقت_الطلب,0,1,0,0,0,توقيت نشاط الشخص يمكن ربطه بأحداث معروفة,APPROVED,راجعه Claude
+train,sa_delivery,قيمة_الطلب,0,0,1,0,0,قيمة الطلب الشخصي تكشف مصروفات الشخص المالية,APPROVED,راجعه Claude؛ قرار الفريق: الفواتير وقيمة الطلب الشخصي حساسة، وسعر المنتج العام عادي
+train,sa_delivery,طريقة_الدفع,0,0,0,0,0,طريقة الدفع بيانات تشغيلية,APPROVED,راجعه Claude
+train,sa_delivery,تقييم_المندوب,0,0,0,0,0,تقييم الخدمة بيانات تشغيلية,APPROVED,راجعه Claude
+valid,sa_travel,رقم_الجواز,1,0,0,0,0,رقم الجواز يحدد الشخص مباشرة,APPROVED,راجعه Claude
+valid,sa_travel,اسم_المسافر,1,0,0,0,0,اسم المسافر يحدده مباشرة,APPROVED,راجعه Claude
+valid,sa_travel,الجنسية,0,1,0,0,0,الجنسية معرّف غير مباشر,APPROVED,راجعه Claude
+valid,sa_travel,تاريخ_الميلاد,0,1,0,0,0,تاريخ الميلاد معرّف غير مباشر قوي,APPROVED,راجعه Claude
+valid,sa_travel,رقم_الرحلة,0,1,0,0,0,رقم الرحلة مع التاريخ يحدد من كان على متنها,APPROVED,راجعه Claude
+valid,sa_travel,تاريخ_الوصول,0,1,0,0,0,تاريخ الوصول حدث يمكن ربطه بالشخص,APPROVED,راجعه Claude
+valid,sa_travel,عدد_المرافقين,0,1,0,0,0,عدد المرافقين يكشف تركيبة المجموعة,APPROVED,راجعه Claude
+valid,sa_travel,رقم_المقعد,0,0,0,0,0,رقم المقعد لا يكشف الشخص وحده,APPROVED,راجعه Claude
+valid,sa_travel,فئة_الغرفة,0,0,0,0,0,نوع الحجز بيانات منتج,APPROVED,راجعه Claude
+valid,sa_travel,سعر_الليلة,0,0,0,0,0,سعر الحجز بيانات تشغيلية,APPROVED,راجعه Claude؛ قرار الفريق: الفواتير وقيمة الطلب الشخصي حساسة، وسعر المنتج العام عادي
+valid,sa_travel,احتياجات_صحية,0,0,1,0,0,الاحتياجات الصحية معلومة حساسة,APPROVED,راجعه Claude
+test,sa_bank_loans,رقم_العميل,1,0,0,1,0,رقم العميل يحدده في أنظمة البنك,APPROVED,راجعه Claude
+test,sa_bank_loans,اسم_العميل,1,0,0,0,0,اسم العميل يحدده مباشرة,APPROVED,راجعه Claude
+test,sa_bank_loans,رقم_الجوال,1,0,0,0,0,رقم الجوال يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,sa_bank_loans,رقم_الهوية_الوطنية,1,0,0,0,0,رقم الهوية يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,sa_bank_loans,العمر,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+test,sa_bank_loans,المدينة,0,1,0,0,0,المدينة معرّف غير مباشر,APPROVED,راجعه Claude
+test,sa_bank_loans,المهنة,0,1,0,0,0,المهنة معرّف غير مباشر,APPROVED,راجعه Claude
+test,sa_bank_loans,الحالة_الاجتماعية,0,1,1,0,0,الحالة الاجتماعية معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,sa_bank_loans,جهة_العمل,0,1,0,0,0,جهة العمل معروفة عن الشخص,APPROVED,راجعه Claude
+test,sa_bank_loans,تاريخ_الطلب,0,1,0,0,0,تاريخ الطلب حدث مرتبط بالشخص,APPROVED,راجعه Claude
+test,sa_bank_loans,مبلغ_القرض,0,0,1,0,0,مبلغ القرض معلومة مالية خاصة,APPROVED,راجعه Claude
+test,sa_bank_loans,الدخل_الشهري,0,0,1,0,0,الدخل معلومة مالية خاصة,APPROVED,راجعه Claude
+test,sa_bank_loans,درجة_سمة,0,0,1,0,0,الدرجة الائتمانية معلومة مالية حساسة,APPROVED,راجعه Claude
+test,sa_bank_loans,حالة_السداد,0,0,1,0,0,التعثر في السداد معلومة حساسة,APPROVED,راجعه Claude
+test,sa_bank_loans,البنك,0,0,0,0,0,اسم البنك بيانات تشغيلية,APPROVED,راجعه Claude
+test,sa_bank_loans,رمز_المنتج,0,0,0,0,0,رمز المنتج بيانات تشغيلية,APPROVED,راجعه Claude
+test,sa_university,الرقم_الجامعي,1,0,0,1,0,الرقم الجامعي يحدد الطالب,APPROVED,راجعه Claude
+test,sa_university,اسم_الطالب,1,0,0,0,0,اسم الطالب يحدده مباشرة,APPROVED,راجعه Claude
+test,sa_university,الجنس,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,sa_university,تاريخ_الميلاد,0,1,0,0,0,تاريخ الميلاد معرّف غير مباشر قوي,APPROVED,راجعه Claude
+test,sa_university,الكلية,0,1,0,0,0,الكلية معروفة عن الطالب,APPROVED,راجعه Claude
+test,sa_university,التخصص,0,1,0,0,0,التخصص معروف عن الطالب,APPROVED,راجعه Claude
+test,sa_university,سنة_القبول,0,1,0,0,0,سنة القبول تضيّق دائرة الدفعة,APPROVED,راجعه Claude
+test,sa_university,المنطقة,0,1,0,0,0,منطقة السكن معرّف غير مباشر,APPROVED,راجعه Claude
+test,sa_university,المعدل_التراكمي,0,0,1,0,0,المعدل سجل تعليمي خاص,APPROVED,راجعه Claude
+test,sa_university,الحالة_الأكاديمية,0,0,1,0,0,الإنذار الأكاديمي يضر كشفه بالطالب,APPROVED,راجعه Claude
+test,sa_university,الساعات_المسجلة,0,0,0,0,0,عدد الساعات عدّاد أكاديمي,APPROVED,راجعه Claude
+test,sa_arabizi,id,0,0,0,1,0,رقم تسلسلي للصف,APPROVED,راجعه Claude
+test,sa_arabizi,esm,1,0,0,0,0,الاسم يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,sa_arabizi,jawal,1,0,0,0,0,رقم الجوال يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,sa_arabizi,hawiya,1,0,0,0,0,رقم الهوية يحدد الشخص مباشرة,APPROVED,راجعه Claude
+test,sa_arabizi,omr,0,1,0,0,0,العمر معرّف غير مباشر,APPROVED,راجعه Claude
+test,sa_arabizi,jins,0,1,1,0,0,الجنس معرّف غير مباشر، ويُعامل كحساس حسب سياسة المشروع,APPROVED,راجعه Claude
+test,sa_arabizi,madina,0,1,0,0,0,المدينة معرّف غير مباشر,APPROVED,راجعه Claude
+test,sa_arabizi,raatib,0,0,1,0,0,الراتب معلومة مالية خاصة,APPROVED,راجعه Claude
+test,sa_arabizi,maradh_mozmen,0,0,1,0,0,المرض المزمن معلومة صحية,APPROVED,راجعه Claude
+test,sa_arabizi,created_at,0,1,0,0,0,وقت تسجيل الشخص في النظام يمكن ربطه بنشاط معروف عنه,APPROVED,راجعه Claude؛ قرار الفريق: وقت تسجيل الشخص أو نشاطه QI
