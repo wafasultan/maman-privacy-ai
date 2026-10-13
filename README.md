@@ -39,8 +39,20 @@ The application runs locally on supported Macs. Dataset contents are processed l
 
 ## See MA'MAN in action
 
-[![MA'MAN application demo](assets/screenshots/03-safer-copy.jpg)](assets/demo/maman-demo.mp4)
+## See MA'MAN in Action
 
+### 1. Dataset Overview
+![Dataset Overview](assets/<img width="848" height="480" alt="dataset-preview" src="https://github.com/user-attachments/assets/58f044f1-0eb3-4650-9c0b-a9ada2a930c5" />
+)
+
+### 2. AI-Powered Column Classification
+![Column Classification](assets/classification.png)
+
+### 3. Privacy Risk Assessment
+![Risk Assessment](assets/risk-assessment.png)
+
+### 4. Privacy Protection Results
+![Protection Results](assets/protection-results.png)
 **▶ [Watch the full product demo (MP4)](assets/demo/maman-demo.mp4)**
 
 ### Product walkthrough
