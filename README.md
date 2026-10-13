@@ -72,14 +72,6 @@ Compare privacy risks before and after applying protection techniques.
 <img width="1470" height="826" alt="protection-results" src="https://github.com/user-attachments/assets/2c83e594-6ad9-45e3-8fef-f8e67ce2210a" />
 
 
-### Product walkthrough
-
-| Upload a CSV | Review privacy risk |
-|:---:|:---:|
-| ![Dataset upload](assets/screenshots/01-upload.jpg) | ![Privacy risk summary](assets/screenshots/02-risk-summary.jpg) |
-| Generate a safer copy | Inspect the protected data |
-| ![Safer copy and download](assets/screenshots/03-safer-copy.jpg) | ![Protected dataset preview](assets/screenshots/04-protected-preview.jpg) |
-
 ## Key features
 
 - **Context-aware CSV ingestion:** detects delimiters and encodings, handles surrounding report text, and distinguishes person-level records from aggregate tables.
