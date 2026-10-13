@@ -1,0 +1,10 @@
+# Tested on macOS Apple Silicon, Python 3.14
+mlx==0.32.3
+mlx-lm[train]==0.32.0
+pandas==3.0.6
+pyarrow==25.0.1
+streamlit==1.65.0
+# RAG retriever: multilingual E5 (intfloat/multilingual-e5-small), run with transformers on the CPU
+torch==2.14.1
+# optional: semantic retrieval for RAG (falls back to char n-grams without it)
+# sentence-transformers
