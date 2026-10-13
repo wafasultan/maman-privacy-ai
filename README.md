@@ -231,9 +231,10 @@ MA'MAN is continuously evolving toward more reliable, efficient, and adaptable d
 
 ## Team
 
-**Tuwaiq Generative AI / LLM Bootcamp**
+***Tuwaiq Bootcamp 
+Generative AI Application Engineering Bootcamp Using Large Language Models***
 
-**Wafa Alotaibi  · Samar Alfallaj· Sultanah Alotaibi
+**Wafa Alotaibi  · Samar Alfallaj· Sultanah Alotaibi**
 
 > Confirm team names, spelling, and individual responsibilities before publishing. The presentation lists three presenters while the existing repository documentation lists four contributors.
 
