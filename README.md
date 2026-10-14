@@ -20,6 +20,15 @@
 </div>
 
 ---
+## The Problem
+
+Data sharing has become essential, but protecting individual privacy remains a critical concern.
+
+Organizations, researchers, and data professionals increasingly rely on datasets to support analysis, research, and decision-making. However, sharing these datasets can unintentionally expose personal or sensitive information.
+
+Even when obvious identifiers are removed, individuals may remain distinguishable through combinations of other attributes. This creates potential privacy risks that are not always visible before a dataset is shared.
+
+The result is a fundamental problem: Data that appears anonymous may still reveal information about the individuals it represents.
 
 ## The challenge
 
